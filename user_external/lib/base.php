@@ -106,7 +106,7 @@ abstract class Base extends \OC\User\Backend{
 				'limit' => $limit,
 				'offset' => $offset
 			),
-			array($search . '%', $this->backend)
+			array('%' . $search . '%', $this->backend)
 		);
 		$users = array();
 		while ($row = $result->fetchRow()) {
